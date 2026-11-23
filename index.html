@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Today's Tasks</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <div>
+        <span class="subtitle">Task Manager</span>
+        <h1>Today’s Tasks</h1>
+      </div>
+      <div class="progress-badge" id="progress">0%</div>
+    </header>
+
+    <section class="banner">
+      <p id="counter">Осталось задач: 0</p>
+      <button type="button" id="clear-btn">Очистить готовые</button>
+    </section>
+
+    <form id="todo-form" class="todo-form">
+      <input type="text" id="todo-input" placeholder="Что нужно сделать?" required />
+      <select id="category-select">
+        <option value="Personal">Personal</option>
+        <option value="Study">Study</option>
+        <option value="Work">Work</option>
+      </select>
+      <button type="submit">+</button>
+    </form>
+
+    <div class="tabs">
+      <button type="button" class="tab active" data-filter="all">All</button>
+      <button type="button" class="tab" data-filter="active">To do</button>
+      <button type="button" class="tab" data-filter="completed">Completed</button>
+    </div>
+
+    <ul id="todo-list" class="todo-list"></ul>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
